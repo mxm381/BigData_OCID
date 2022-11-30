@@ -5,7 +5,7 @@ const port = 3000
 const mysql = require('mysql2')
 router = express.Router();
 const connection = mysql.createConnection({
-  host: '35.204.42.188', //wieuncweuiocnweoucnbewiucw
+  host: 'db',
   port: '3306',
   user: 'root',
   password: 'bigD',
@@ -16,7 +16,6 @@ async function queryDB(input) {
 }
 app.use(cors())
 app.get('/:longitudeParameter/:lattitudeParameter', function(req, res) {
-// console.log("Longitude: " + req.params.lonParam + "\nLatitude: " + req.params.latParam);
 let sql = `SELECT * FROM towers WHERE st_distance_Sphere(point(lon, lat), point(${req.params.longitudeParameter}, ${req.params.lattitudeParameter})) <= towers.range*200`;
 console.log(sql)
 queryDB(sql, res);
