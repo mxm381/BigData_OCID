@@ -15,6 +15,7 @@ connection.connect();
 async function queryDB(input) {
 }
 app.use(cors())
+app.use(express.static('/backend/dist'));
 app.get('/:longitudeParameter/:lattitudeParameter', function(req, res) {
 let sql = `SELECT * FROM towers WHERE st_distance_Sphere(point(lon, lat), point(${req.params.longitudeParameter}, ${req.params.lattitudeParameter})) <= towers.range*200`;
 console.log(sql)

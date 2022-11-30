@@ -19,7 +19,7 @@ export class AppComponent {
   LTE_count = 0;
   async action() {
     console.log("HI")
-    await fetch("http://localhost:3000/" + this.longitude + "/" + this.lattitude)
+    await fetch("http://"+ self.location.host + "/" + this.longitude + "/" + this.lattitude)
         .then(response => response.json())
         .then(data =>  {
           console.log(data.data)
