@@ -45,18 +45,22 @@ export class AppComponent {
           console.log("UMTS" + this.UMTS_count)
           console.log("CDMA" + this.CDMA_count)
           console.log("LTE" + this.LTE_count)
+          if(this.GSM_count == 0) {this.GSM_return = "none"}
           if(this.GSM_count < 2) {this.GSM_return = "poor"}
           if(this.GSM_count > 2) {this.GSM_return = "weak"}
           if(this.GSM_count > 5) {this.GSM_return = "okay"}
           if(this.GSM_count > 25) {this.GSM_return = "strong"} 
+          if(this.UMTS_count == 0) {this.UMTS_return = "none"}
           if(this.UMTS_count < 2) {this.UMTS_return = "poor"}
           if(this.UMTS_count > 2) {this.UMTS_return = "weak"}
           if(this.UMTS_count > 5) {this.UMTS_return = "okay"}
-          if(this.UMTS_count > 25) {this.UMTS_return = "strong"}      
+          if(this.UMTS_count > 25) {this.UMTS_return = "strong"}  
+          if(this.CDMA_count == 0) {this.CDMA_return = "none"}    
           if(this.CDMA_count < 2) {this.CDMA_return = "poor"}
           if(this.CDMA_count > 2) {this.CDMA_return = "weak"}
           if(this.CDMA_count > 5) {this.CDMA_return = "okay"}
           if(this.CDMA_count > 25) {this.CDMA_return = "strong"}  
+          if(this.LTE_count == 0) {this.LTE_return = "none"}
           if(this.LTE_count < 2) {this.LTE_return = "poor"}
           if(this.LTE_count > 2) {this.LTE_return = "weak"}
           if(this.LTE_count > 5) {this.LTE_return = "okay"}
