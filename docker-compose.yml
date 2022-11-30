@@ -30,7 +30,7 @@ services:
         image: 'mysql:latest'
         container_name: mysql #####
         build:
-          context: ./mysql
+          context: ./db
           dockerfile: Dockerfile
         environment:
             - MYSQL_ROOT_PASSWORD=bigD
