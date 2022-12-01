@@ -3,7 +3,7 @@ submission for BigData subject
 
 ## how to use:
 
-1) Setup
+### 1) Setup
 
 1.1) set up a VM (https://github.com/marcelmittelstaedt/BigData/blob/master/slides/winter_semester_2022-2023/1_Distributed-Systems_Data-Models_and_Access.pdf pages 77-80)
 
@@ -25,7 +25,7 @@ submission for BigData subject
 
 1.10) start-all.sh
 
-2) Run the dags
+### 2) Run the dags
 
 2.1) Visit [IP-Adress of VM]:8080
 
@@ -33,4 +33,4 @@ submission for BigData subject
 
 2.3) Trigger DAG dag_diff
 
-3) Use the UI: [IP-Adress of VM]:3000
+### 3) Use the UI: [IP-Adress of VM]:3000
