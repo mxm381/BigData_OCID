@@ -11,23 +11,21 @@ submission for BigData subject
 
 1.3) clone this Git (git clone https://github.com/mxm381/BigData_OCID)
 
-1.4) sudo apt update
+1.4) sudo apt install docker-compose
 
-1.5) sudo apt install docker-compose
+1.5) cd BigData_OCID
 
-1.6) cd BigData_OCID
+1.6) docker-compose up -d
 
-1.7) docker-compose up -d
+1.7) docker exec -it hadoop bash
 
-1.8) docker exec -it hadoop bash
+1.8) sudo su hadoop
 
-1.9) sudo su hadoop
+1.9) cd
 
-1.10) cd
+1.10) stop-all.sh (in case hadoop still runs any nodenames, they will be stopped with this command, without doing this, I had difficulties with hadoop)
 
-1.11) stop-all.sh (in case hadoop still runs any nodenames, they will be stopped with this command, without doing this, I had difficulties with hadoop)
-
-1.12) start-all.sh
+1.11) start-all.sh
 
 ### 2) Run the dags
 
