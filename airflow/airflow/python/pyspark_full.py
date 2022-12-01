@@ -2,7 +2,8 @@ import pyspark
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
 import argparse
-from pyspark.sql.functions import desc
+import pyspark.sql.types import *
+from pyspark.sql.functions import *
 
 def get_args():
     """
