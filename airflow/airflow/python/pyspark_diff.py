@@ -19,17 +19,12 @@ def get_args():
     parser.add_argument('--hdfs_target_format', required=True, type=str)
     
     return parser.parse_args()
-
-
 # Parse Command Line Args
 args = get_args()
-
 # Initialize Spark Context
 sc = pyspark.SparkContext()
 spark = SparkSession(sc)
-
 print("Hallo")
-
 database_schema = StructType(
         [
             StructField("radio", StringType(), True),
@@ -47,19 +42,14 @@ database_schema = StructType(
             StructField("updated", IntegerType(), True),
             StructField("averageSignal", IntegerType(), True)
         ])
-
 data_diff = spark.read.format("csv")\
 .options(header="true", delimiter=",", nullValue="null", inferSchema="false"
 ).schema(database_schema).load(args.hdfs_source_dir + "/cell_towers_diff.csv")
-
 print("herrlich")
-
 #select relevant cols
 data_diff = data_diff.select("radio", "lat", "lon", "range")
-
 data_diff.repartition('radio').write.format("parquet").mode("append").option(
         "path", args.hdfs_target_dir).partitionBy("radio").saveAsTable("default")
-
 data_diff.write.format('jdbc').options(
         url='jdbc:mysql://mysql:3306/towers',
         driver='com.mysql.cj.jdbc.Driver',
