@@ -40,6 +40,7 @@ database_schema = StructType(
             StructField("updated", IntegerType(), True),
             StructField("averageSignal", IntegerType(), True)
         ])
+#df_diff macht hier keinen Sinn, habe dies von der pyspark_diff kopiert und nicht geändert...
 df_diff = spark.read.format("csv")\
 .options(header="true", delimiter=",", nullValue="null", inferSchema="false"
 ).schema(database_schema).load(args.hdfs_source_dir + "/cell_towers.csv")
