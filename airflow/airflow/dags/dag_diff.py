@@ -17,6 +17,7 @@ from airflow.operators.zip_file_operations import UnzipFileOperator
 from airflow.operators.hdfs_operations import HdfsPutFileOperator, HdfsMkdirFileOperator
 from airflow.operators.filesystem_operations import CreateDirectoryOperator
 from airflow.operators.filesystem_operations import ClearDirectoryOperator
+from datetime import datetime
 
 args = {
     'owner': 'airflow'
