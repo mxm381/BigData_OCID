@@ -1,14 +1,5 @@
 version: '3'
 services:  
-    airflow:
-        image: 'marcelmittelstaedt/airflow:latest'
-        container_name: airflow
-        build:
-          context: ./airflow
-          dockerfile: Dockerfile
-        ports:
-            - '8080:8080'
-        restart: 'always'
     hadoop:
         image: 'marcelmittelstaedt/spark_base:latest'
         container_name: hadoop
@@ -25,6 +16,15 @@ services:
             - '9864:9864'
             - '10000:10000'
             - '8032:8032'
+        restart: 'always'
+    airflow:
+        image: 'marcelmittelstaedt/airflow:latest'
+        container_name: airflow
+        build:
+            context: ./airflow
+            dockerfile: Dockerfile
+        ports:
+            - '8080:8080'
         restart: 'always'
     mysql:
         image: 'mysql:latest'
