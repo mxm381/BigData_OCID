@@ -29,11 +29,11 @@ submission for BigData subject
 
 2.1) Visit [IP-Adress of VM]:8080
 
-2.2) Activate DAG dag_full
+2.2) Activate DAG cell_towers
 
-2.3) Wait until dag_full is finished
+2.3) Wait until cell_towers is finished
 
-2.3) Activate DAG dag_diff
+2.3) Activate DAG cell_towers_diff
 
 ### 3) Access the data: 
 
