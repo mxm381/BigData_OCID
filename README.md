@@ -1,5 +1,6 @@
 # BigData_OCID
-submission for BigData subject
+submission for BigData subject 
+Stuttgart, 01.12.2022, Maximilian Nagel
 
 ## how to use:
 
