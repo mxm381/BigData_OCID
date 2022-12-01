@@ -35,8 +35,9 @@ submission for BigData subject
 
 2.3) Activate DAG dag_diff
 
-### 3) Use the UI: [IP-Adress of VM]:3000
+### 3) Access the data: 
 
+3.1 Visit the website at: [IP-Adress of VM]:3000
 
 
 ### Runtime
