@@ -47,7 +47,7 @@ database_schema = StructType(
 
 df_diff = spark.read.format("csv")\
 .options(header="true", delimiter=",", nullValue="null", inferSchema="false"
-).schema(database_schema).load(args.hdfs_source_dir + "ocid_diff_" + args.year + "-" + args.month + "-" + args.day + ".csv")
+).schema(database_schema).load(args.hdfs_source_dir + "/cell_towers.csv")
 
 #select relevant cols
 df_diff = df_diff.select("radio", "lat", "lon", "range")
