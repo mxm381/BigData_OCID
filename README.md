@@ -1,2 +1,36 @@
 # BigData_OCID
 submission for BigData subject
+
+## how to use:
+
+### 1) Setup
+
+1.1) set up a VM (https://github.com/marcelmittelstaedt/BigData/blob/master/slides/winter_semester_2022-2023/1_Distributed-Systems_Data-Models_and_Access.pdf pages 77-80)
+
+1.2) ssh into created VM
+
+1.3) clone this Git
+
+1.4) cd BigData_OCID
+
+1.5) sudo apt install docker-compose
+
+1.6) docker-compose up -d
+
+1.7) docker exec -it hadoop bash
+
+1.8) sudo su hadoop
+
+1.9) cd
+
+1.10) start-all.sh
+
+### 2) Run the dags
+
+2.1) Visit [IP-Adress of VM]:8080
+
+2.2) Trigger DAG dag_full
+
+2.3) Trigger DAG dag_diff
+
+### 3) Use the UI: [IP-Adress of VM]:3000
