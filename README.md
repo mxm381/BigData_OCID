@@ -29,8 +29,17 @@ submission for BigData subject
 
 2.1) Visit [IP-Adress of VM]:8080
 
-2.2) Trigger DAG dag_full
+2.2) Activate DAG dag_full
 
-2.3) Trigger DAG dag_diff
+2.3) Wait until dag_full is finished
+
+2.3) Activate DAG dag_diff
 
 ### 3) Use the UI: [IP-Adress of VM]:3000
+
+
+
+### Runtime
+
+The dag_diff will be triggered every day at 04:00h, as the OCID data is updated every day at 02:00h.
+The data can be accessed via the website and the user always has the newest data.
