@@ -42,5 +42,5 @@ submission for BigData subject
 
 ### Runtime
 
-The dag_diff will be triggered every day at 04:00h, as the OCID data is updated every day at 02:00h.
+The cell_towers_diff will be triggered every day at 04:00h, as the OCID data is updated every day at 02:00h.
 The data can be accessed via the website and the user always has the newest data.
