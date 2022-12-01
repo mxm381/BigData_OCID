@@ -50,7 +50,7 @@ clear_local_import_diff_dir = ClearDirectoryOperator(
 #load data from ocid
 download_cell_towers_diff = HttpDownloadOperator(
     task_id='download_cell_towers_diff',
-    download_uri='https://onedrive.live.com/download?cid=6CD9C3F4D2E50BCB&resid=6CD9C3F4D2E50BCB%2159291&authkey=ANu-4_qT3NxqPqo', #muss durch die offizielle URL getauscht werden!
+    download_uri='https://opencellid.org/ocid/downloads?token=pk.2b0ffe67bffaf2bc09c4fe8fd1b17d45&type=diff&file=OCID-diff-cell-export-{{ds}}-T000000.csv.gz',
     save_to='/home/airflow/ocid_diff/raw/cell_towers_diff.csv.gz',
     dag=dag,
 )
