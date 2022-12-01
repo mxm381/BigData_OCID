@@ -38,7 +38,9 @@ Stuttgart, 01.12.2022, Maximilian Nagel
 
 ### 3) Access the data: 
 
-3.1 Visit the website at: [IP-Adress of VM]:3000
+3.1 Enable Port 3000 in the Firewall-Settings of your VM (e.g. in GCloud console)
+
+3.2 Visit the website at: [IP-Adress of VM]:3000
 
 
 ### Runtime
