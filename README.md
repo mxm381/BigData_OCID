@@ -23,7 +23,9 @@ submission for BigData subject
 
 1.9) cd
 
-1.10) start-all.sh
+1.10) stop-all.sh (in case hadoop still runs any nodenames, they will be stopped with this command, without doing this, I had difficulties with hadoop)
+
+1.11) start-all.sh
 
 ### 2) Run the dags
 
