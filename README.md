@@ -9,7 +9,7 @@ submission for BigData subject
 
 1.2) ssh into created VM
 
-1.3) clone this Git
+1.3) clone this Git (git clone https://github.com/mxm381/BigData_OCID)
 
 1.4) cd BigData_OCID
 
